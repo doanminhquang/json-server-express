@@ -39,4 +39,5 @@ server.listen(PORT, () => {
       console.log(`http://localhost:${PORT}/${item}` + "\n")
     );
   console.log("Home\n" + `http://localhost:${PORT}`);
+  console.log(process.env.HEROKU_APP_NAME);
 });
