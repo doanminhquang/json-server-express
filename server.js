@@ -40,10 +40,3 @@ server.listen(PORT, () => {
     );
   console.log("Home\n" + `http://localhost:${PORT}`);
 });
-
-var Heroku = require('heroku-client');
-var heroku = new Heroku({ token: process.env.HEROKU_API_TOKEN });
-var app = heroku.apps('my-app');
-app.domains().list(function (err, domains) {
-  console.log(domains);
-});
