@@ -6,6 +6,7 @@ const db_file_name = "db.json";
 const router = jsonServer.router(db_file_name);
 const morgan = require("morgan");
 const db = require(`./${db_file_name}`);
+const cors = require('cors')
 /*
 const rules = auth.rewriter({
   // Permission rules
@@ -20,7 +21,9 @@ server.db = router.db;
 
 //server.use(jsonServer.bodyParser);
 server.use(morgan("tiny"));
-
+server.use(cors({
+    origin: "*",
+  }));
 server.use("/assets", express.static(__dirname + "/assets"));
 server.use(
   "/",
