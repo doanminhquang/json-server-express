@@ -35,9 +35,9 @@ server.use(router);
 
 const PORT = process.env.PORT || 3000;
 
-server.listen(PORT, () => {
-  var host = server.address().address
-  var port = server.address().port
+var app = server.listen(PORT, () => {
+  var host = app.address().address;
+  var port = app.address().port;
    
   console.log("http://%s:%s", host, port)
   console.log("\nResources\n");
