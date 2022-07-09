@@ -2,3 +2,4 @@
 - json server auth
 - express 
 - static content
+- morgan
