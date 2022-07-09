@@ -35,11 +35,7 @@ server.use(router);
 
 const PORT = process.env.PORT || 3000;
 
-const app = server.listen(PORT,"127.0.0.1", () => {
-  const host = app.address().address;
-  const port = app.address().port;
-
-  console.log("http://%s:%s", host, port)
+server.listen(PORT, () => {
   console.log("\nResources\n");
   if (db)
     Object.keys(db).map((item) =>
