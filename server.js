@@ -8,7 +8,7 @@ const morgan = require("morgan");
 const db = require(`./${db_file_name}`);
 const cors = require('cors')
 /*
-const rules = auth.rewriter({
+const rules = middlewares.rewriter({
   // Permission rules
   users: 600,
   messages: 640,
